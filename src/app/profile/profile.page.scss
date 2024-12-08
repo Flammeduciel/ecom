@@ -1,0 +1,49 @@
+.cont1{
+  // margin-left: 20px;
+  // margin-right: 20px;
+  text-align: center;
+  padding-top: 10px;
+  // border: 1px solid;
+  background-color: rgb(247, 249, 247);
+  border-radius: 10px;
+  ion-col{
+  }
+  i{
+    font-size: 40px;
+  }
+  p{
+    font-size: 11px;
+  }
+}
+
+.fa-arrow-right{
+  font-size: 18px !important;
+}
+
+.space{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.avatar{
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+*{
+  // border: 1px solid;
+}
+
+.right-space{
+  margin-left: 20px;
+}
+
+ion-item{
+  height: 60px;
+  align-content: center;
+  i{
+    font-size: 25px;
+  }
+}

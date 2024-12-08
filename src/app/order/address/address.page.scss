@@ -1,0 +1,110 @@
+*{
+  // border: 1px solid;
+}
+
+ion-col{
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+i{
+  font-size: 28px;
+}
+
+.tab{
+  ion-col{
+    height: 70px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(105, 200, 108, 0.112);
+  }
+  i{
+    background-color: white;
+    border-radius: 50%;
+  }
+}
+
+.active{
+  border-bottom: 2px solid rgb(0, 0, 0) !important;
+}
+
+.down{
+  position: relative;
+  bottom: 1px;
+}
+
+ion-card{
+  border: 0.5px solid rgba(105, 200, 108, 0.112);
+  margin: 30px;
+  box-shadow: none;
+  ion-row{
+    margin-bottom: 20px;
+  }
+}
+
+ion-card-title{
+  text-align: left !important;
+
+}
+
+.float{
+  font-size: 15px;
+  position: relative;
+  // border: 1px solid;
+  padding: 10px;
+  // border-radius: 10px;
+  top: -250px;
+  left: 20px;
+  background-color: white;
+  float: left;
+}
+
+.add-photo{
+  font-size: 30px;
+  position: relative;
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 10px;
+  top: -350px;
+  /* left: 10px; */
+  color: #347d34;
+  background-color: #b5d7b5;
+  float: right;
+
+}
+
+textarea{
+  outline-color: rgb(3, 118, 3);
+  outline-width: 3px;
+  width: 100%;
+  padding: 30px;
+  // padding-right: 30px;
+  // height: 60px;
+  border: 1px solid rgb(79, 147, 79);
+  border-radius: 15px;
+  font-size: 20px;
+}
+
+.space{
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}
+
+div{
+  margin: 10px;
+}
+
+label{
+  color: green;
+}
+
+input{
+  height: 25px;
+}
+
+span{
+  padding-left: 30px;
+  position: absolute;
+  left: 60px;
+  top: 0px;
+  // z-index: 5;
+}

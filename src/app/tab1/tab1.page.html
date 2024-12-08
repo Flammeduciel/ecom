@@ -1,0 +1,92 @@
+<ion-content class="ion-padding">
+  <ion-row>
+    <ion-col size="9">
+      <input type="text" name="" id="" placeholder="chercher un article ou une boutique ....">
+    </ion-col>
+    <ion-col size="3">
+      <button class="btn-outline">
+        <i class="fas fa-sort-amount-up"></i>
+      </button>
+    </ion-col>
+  </ion-row>
+
+  <!-- Slide avec les catégories -->
+  <swiper-container
+    [slidesPerView]="4"
+    [spaceBetween]="10"
+    class="swiper-container">
+
+    <swiper-slide *ngFor="let category of categories">
+      <div class="category-card">
+        <i [class]="category.icon" class="category-icon"></i> <!-- Utilisation de l'icône FontAwesome -->
+        <div class="category-name">{{category.name}}</div>
+      </div>
+    </swiper-slide>
+
+  </swiper-container>
+
+  <!-- filtres -->
+  <div>
+    <ion-badge class="bg-cat" *ngFor="let category of categories" mode="ios">{{category.name}}</ion-badge>
+  </div>
+  <!-- <div>
+    <i-row>
+      <ion-col size="3">
+        <ion-badge>Trier par <i class=" fas fa-sort"></i> </ion-badge>
+      </ion-col>
+      <ion-col size="3">
+        <ion-badge>Categorie <i class=" fas fa-sort"></i></ion-badge>
+      </ion-col>
+      <ion-col size="2">
+        <ion-badge>Note <i class=" fas fa-sort"></i></ion-badge>
+      </ion-col>
+    </i-row>
+  </div> -->
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let product of products">
+        <div class="product-card">
+          <div class="product-image">
+            <img [src]="product.imageUrl" alt="Produit">
+            <!-- <ion-icon name="heart" class="wishlist-icon" ></ion-icon> -->
+            <!-- <div class="discount-badge">{{ product.discount }}% off</div> -->
+          </div>
+          <div class="product-info">
+            <p class="product-name truncate-text">{{ product.name }}</p>
+            <!-- <ion-badge mode="ios">{{ product.category }}</ion-badge> -->
+            <p class="product-category truncate-text">{{ product.category }}</p>
+            <p class="product-price">{{ product.price | currency:'XAF' }}</p>
+            <i class="fas fa-cart-plus add-to-cart"></i>
+          </div>
+          <!-- <ion-icon name="add" class="add-to-cart"></ion-icon> -->
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <hr>
+
+  <h2>Vous aimerez peut-être : </h2>
+
+  <swiper-container [slidesPerView]="2.2" [spaceBetween]="10" [autoplay]="{ delay: 1000 }">
+    <swiper-slide *ngFor="let product of products">
+      <div class="product-card">
+        <div class="product-image">
+          <img [src]="product.imageUrl" alt="Produit">
+          <!-- <ion-icon name="heart" class="wishlist-icon" ></ion-icon> -->
+          <!-- <div class="discount-badge">{{ product.discount }}% off</div> -->
+        </div>
+        <div class="product-info">
+          <p class="product-name truncate-text">{{ product.name }}</p>
+          <!-- <ion-badge mode="ios">{{ product.category }}</ion-badge> -->
+          <p class="product-category truncate-text">{{ product.category }}</p>
+          <p class="product-price">{{ product.price | currency:'XAF' }}</p>
+          <i class="fas fa-cart-plus add-to-cart"></i>
+        </div>
+        <!-- <ion-icon name="add" class="add-to-cart"></ion-icon> -->
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+</ion-content>

@@ -1,0 +1,234 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content>  <!-- Informations sur le vendeur -->
+  <div class="header">
+    <swiper-container
+      [slidesPerView]="1"
+      [spaceBetween]="5"
+      [pagination]="{ clickable: true }"
+      class="product-images-swiper"
+    >
+      <!-- Loop through product images -->
+      <swiper-slide *ngFor="let image of productImages ; let i = index">
+        <ion-img [src]="image" class="gallery-image" (click)="openGallery(i)"></ion-img>
+      </swiper-slide>
+    </swiper-container>
+  </div>
+  <i class="far fa-heart wishlist"></i>
+  <i class="fas fa-store-alt shop"></i>
+  <div class="avg-note">4.5<i class="fas fa-star star"></i></div>
+  <div class="content">
+      <ion-item>
+        <ion-label><h1>{{ productName }}</h1></ion-label>
+        <ion-item lines="none" slot="end">
+          <h1>XAF 14.000</h1>
+        </ion-item>
+      </ion-item>
+
+      <p>En stock(23)</p>
+
+      <h3>Couleurs</h3>
+        <ion-badge class="bg-cat" mode="ios">bleu</ion-badge>
+        <ion-badge class="bg-cat" mode="ios">rouge</ion-badge>
+        <ion-badge class="bg-cat" mode="ios">vert</ion-badge>
+        <h3>Tailles</h3>
+        <ion-badge class="bg-cat" mode="ios">XXL</ion-badge>
+        <ion-badge class="bg-cat" mode="ios">XL</ion-badge>
+        <ion-badge class="bg-cat" mode="ios">L</ion-badge>
+        <ion-badge class="bg-cat" mode="ios">M</ion-badge>
+
+    <ion-row>
+      <ion-col size="2">
+          <img class="avatar" src="assets/images/products/white-5.jpg" />
+      </ion-col>
+      <ion-col size="7">
+        <h5>Boutique</h5>
+        <p>petite description</p>
+      </ion-col>
+      <ion-col size="3"><i class="fas fa-bookmark star"> </i> certifié</ion-col>
+    </ion-row>
+
+    <ion-accordion-group>
+      <ion-accordion>
+        <!-- Catégorie principale -->
+        <ion-item slot="header">
+          <h1 align="center">Description</h1>
+        </ion-item>
+
+        <!-- Sous-catégories -->
+        <ion-list slot="content">
+          <!-- <ion-item *ngFor="let subCategory of category.sub_categories"  routerLink="/categories/{{subCategory.id}}"> -->
+          <ion-item>
+            <div class="desc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minima aliquid tempora, debitis accusantium inventore, vel quia atque corporis et consectetur dignissimos, non maxime omnis asperiores vitae illo sed voluptatibus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque rerum, perspiciatis vitae, modi numquam dicta mollitia hic sed eaque amet quaerat veniam eos alias libero. Iure quisquam beatae amet minima? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident soluta corporis nam debitis a! Quas sequi eaque, hic, exercitationem aliquid debitis facere suscipit explicabo ipsam laudantium voluptatibus dolorum, consectetur quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus voluptas vel iure repellendus veritatis corporis maiores eum minima maxime. Eius nemo omnis repellendus quae odit quos officia eos. Illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit molestiae possimus dolor dolorum! Odit fugiat quisquam ratione culpa quo provident molestias laboriosam velit! Necessitatibus, vel inventore? Vel, nisi quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nesciunt dolores a repellendus provident beatae eaque amet, fugit qui ipsum eveniet minima facilis possimus quis cum commodi! Numquam, quia mollitia!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minima aliquid tempora, debitis accusantium inventore, vel quia atque corporis et consectetur dignissimos, non maxime omnis asperiores vitae illo sed voluptatibus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque rerum, perspiciatis vitae, modi numquam dicta mollitia hic sed eaque amet quaerat veniam eos alias libero. Iure quisquam beatae amet minima? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident soluta corporis nam debitis a! Quas sequi eaque, hic, exercitationem aliquid debitis facere suscipit explicabo ipsam laudantium voluptatibus dolorum, consectetur quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus voluptas vel iure repellendus veritatis corporis maiores eum minima maxime. Eius nemo omnis repellendus quae odit quos officia eos. Illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit molestiae possimus dolor dolorum! Odit fugiat quisquam ratione culpa quo provident molestias laboriosam velit! Necessitatibus, vel inventore? Vel, nisi quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nesciunt dolores a repellendus provident beatae eaque amet, fugit qui ipsum eveniet minima facilis possimus quis cum commodi! Numquam, quia mollitia!
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque minima aliquid tempora, debitis accusantium inventore, vel quia atque corporis et consectetur dignissimos, non maxime omnis asperiores vitae illo sed voluptatibus! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque rerum, perspiciatis vitae, modi numquam dicta mollitia hic sed eaque amet quaerat veniam eos alias libero. Iure quisquam beatae amet minima? Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident soluta corporis nam debitis a! Quas sequi eaque, hic, exercitationem aliquid debitis facere suscipit explicabo ipsam laudantium voluptatibus dolorum, consectetur quod. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus voluptas vel iure repellendus veritatis corporis maiores eum minima maxime. Eius nemo omnis repellendus quae odit quos officia eos. Illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit molestiae possimus dolor dolorum! Odit fugiat quisquam ratione culpa quo provident molestias laboriosam velit! Necessitatibus, vel inventore? Vel, nisi quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nesciunt dolores a repellendus provident beatae eaque amet, fugit qui ipsum eveniet minima facilis possimus quis cum commodi! Numquam, quia mollitia!
+              </p>
+            </div>
+          </ion-item>
+        </ion-list>
+      </ion-accordion>
+    </ion-accordion-group>
+
+
+      <h1 class="tab">Commentaires</h1>
+      <ion-list-header>
+        <ion-label>tous les commentaires</ion-label>
+        <ion-button>cliquez ici</ion-button>
+      </ion-list-header>
+    <div class="comm">
+      <ion-row>
+        <ion-col size="2">
+            <img class="avatar" src="assets/images/products/white-5.jpg" />
+        </ion-col>
+        <ion-col size="8">
+          <h5>Nom et prenom</h5>
+          <p>date de l'envoi</p>
+        </ion-col>
+        <ion-col size="2">5 <i class=" fas fa-star star"></i></ion-col>
+      </ion-row>
+      <div class="com-content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.  officia eos. Illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit molestiae possimus dolor dolorum! Odit fugiat quisquam ratione culpa quo provident molestias laboriosam velit! Necessitatibus, vel inventore? Vel, nisi quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nesciunt dolores a repellendus provident beatae eaque amet, fugit qui ipsum eveniet minima facilis possimus quis cum commodi! Numquam, quia mollitia!
+        </p>
+        <div class="header-image-container">
+          <swiper-container
+            [slidesPerView]="3"
+            [spaceBetween]="10"
+            [pagination]="{ clickable: true }"
+            [navigation]="true"
+            class="product-images-swiper"
+          >
+            <swiper-slide *ngFor="let image of productImages; let i = index">
+              <ion-img [src]="image" (click)="openGallery(i)" ></ion-img>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+    </div>
+    <div class="comm">
+      <ion-row>
+        <ion-col size="2">
+            <img class="avatar" src="assets/images/products/white-5.jpg" />
+        </ion-col>
+        <ion-col size="8">
+          <h5>Nom et prenom</h5>
+          <p>date de l'envoi</p>
+        </ion-col>
+        <ion-col size="2">5 <i class=" fas fa-star star"></i></ion-col>
+      </ion-row>
+      <div class="com-content">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.  officia eos. Illo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fugit molestiae possimus dolor dolorum! Odit fugiat quisquam ratione culpa quo provident molestias laboriosam velit! Necessitatibus, vel inventore? Vel, nisi quaerat? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nesciunt dolores a repellendus provident beatae eaque amet, fugit qui ipsum eveniet minima facilis possimus quis cum commodi! Numquam, quia mollitia!
+        </p>
+        <div class="header-image-container">
+          <swiper-container
+            [slidesPerView]="3"
+            [spaceBetween]="10"
+            [pagination]="{ clickable: true }"
+            [navigation]="true"
+            class="product-images-swiper"
+          >
+            <swiper-slide *ngFor="let image of productImages; let i = index">
+              <ion-img [src]="image" (click)="openGallery(i)" ></ion-img>
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+    </div>
+
+
+  <h2>Vous aimerez peut-être : </h2>
+
+  <swiper-container [slidesPerView]="2" [spaceBetween]="10" [autoplay]="{ delay: 3000 }">
+    <swiper-slide *ngFor="let product of products">
+      <div class="product-card">
+        <div class="product-image">
+          <img [src]="product.imageUrl" alt="Produit">
+          <!-- <ion-icon name="heart" class="wishlist-icon" ></ion-icon> -->
+          <!-- <div class="discount-badge">{{ product.discount }}% off</div> -->
+        </div>
+        <div class="product-info">
+          <p class="product-name truncate-text">{{ product.name }}</p>
+          <!-- <ion-badge mode="ios">{{ product.category }}</ion-badge> -->
+          <p class="product-category truncate-text">{{ product.category }}</p>
+          <p class="product-price">{{ product.price | currency:'XAF' }}</p>
+          <i class="fas fa-cart-plus add-to-cart"></i>
+        </div>
+        <!-- <ion-icon name="add" class="add-to-cart"></ion-icon> -->
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+
+
+
+
+</div>
+  <br><br><br><br>
+</ion-content>
+<ion-footer>
+
+  <ion-row>
+    <ion-col size="4">
+      <div class="quantity-controls">
+      <i class="fas fa-minus-circle"></i>
+
+      <ion-input
+        type="number"
+        min="1"
+        max="99"
+        value="1"
+        class="quantity-input">
+      </ion-input>
+
+      <i class="fas fa-plus-circle"></i>
+      </div>
+    </ion-col>
+    <ion-col size="8">
+      <ion-button fill="clear" shape="round">
+        Ajouter au panier
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
+
+
+
+
+<!-- Modal Gallery -->
+<ion-modal [isOpen]="isModalOpen" (ionModalDidDismiss)="closeGallery()">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-button (click)="closeGallery()">Fermer</ion-button>
+        </ion-buttons>
+        <ion-title>Galerie d'Images</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <swiper-container
+        [initialSlide]="currentImageIndex"
+        [slidesPerView]="1"
+        [spaceBetween]="0"
+        [pagination]="{ clickable: true }"
+        [navigation]="true"
+        class="gallery-swiper"
+      >
+        <swiper-slide *ngFor="let image of productImages">
+          <ion-img [src]="image" class="gallery-image"></ion-img>
+        </swiper-slide>
+      </swiper-container>
+    </ion-content>
+  </ng-template>
+</ion-modal>

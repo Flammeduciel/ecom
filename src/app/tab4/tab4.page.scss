@@ -1,0 +1,177 @@
+
+
+
+  *{
+    // border: 1px solid;
+  }
+
+  .quantity-controls{
+    // position: absolute;
+    /* top: 0px; */
+    width: 100px;
+    // border: 1px solid black;
+    display: flex;
+    bottom: 10px;
+    right: 10px;
+    i{
+      // height: 20px;
+      font-size: 25px;
+      text-align: center;
+      border: 2px solid #c6eac7eb;
+      border-radius: 5px;
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .plus{
+      background-color: #c6eac7eb;
+      color: white;
+    }
+    .moins{
+      color: #c6eac7eb;
+    }
+}
+
+.delete{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: rgb(242, 163, 163);
+  font-size: 20px;
+}
+
+.quantity-input {
+  // border: 2px solid blue;
+  height: 30px;
+  text-align: center;
+  width: 200px;
+}
+
+i{
+  margin: auto;
+}
+
+.part-two{
+  margin-left: 10px;
+}
+
+p
+{
+  margin:0;
+}
+ion-header {
+  // background-color: blue;
+  box-shadow: none;
+}
+ion-content{
+  // top: 20px;
+  // bottom: 70px;
+  position: absolute;
+  background-color: #dfecdf;
+}
+.rounded-segment {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  // background: #e5f6e0; /* Vert pâle */
+  // // border-radius: 20px;
+  // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ion-segment-button {
+  margin-left: 15px;
+  // --indicator-color: #6abf69; /* Vert marécage pour l'indicateur actif */
+  color: #556b2f; /* Couleur par défaut des boutons */
+  --color-checked: white; /* Couleur du texte quand actif */
+  --background-checked: #6abf69; /* Fond des boutons actifs */
+  --border-radius: 20px; /* Arrondi */
+  // --border-color: ;
+  border: 2px solid #075509;
+  // font-size: 14px;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+ion-footer{
+  padding-left: 10px;
+  // padding-right: 10px;
+  // margin-left: 10px !important;
+  margin-right: 10px !important;
+  border-radius: 30px;
+  box-shadow: none;
+  ion-col{
+    align-content: center;
+  }
+  background-color: #c6eac7eb;
+  ion-button{
+    color: #075509;
+    border: 2.5px solid #149c19;
+    border-radius: 20px;
+    width: 100%;
+  }
+}
+
+.swiper-container {
+  padding: 10px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  // background-color: #f0f8f0;  /* Fond très léger vert */
+  border-radius: 8px;  /* Coins arrondis pour la carte */
+  // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Assure que la carte a une hauteur appropriée */
+}
+
+.category-icon {
+  font-size: 20px;  /* Taille de l'icône */
+  color: #28812b;   /* Couleur de l'icône (vert) */
+  background-color: #dcedc8;  /* Fond léger vert clair autour de l'icône */
+  border-radius: 50%;   /* Rend l'icône ronde */
+  padding: 15px;  /* Espacement autour de l'icône */
+  margin-bottom: 10px;  /* Espacement entre l'icône et le nom */
+}
+
+.category-name {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.preferences-content {
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+}
+
+ion-header {
+  padding-top: env(safe-area-inset-top); /* Sécurité pour iOS */
+}
+
+.search-bar {
+  // --background: #f1f1f1;
+  // // --border-radius: 20px;
+  // --padding-start: 10px;
+  // --padding-end: 10px;
+  // flex: 1;
+  // border: 1px solid #28812b;
+}
+
+ion-badge{
+  align-items: center;
+  padding: 5px;
+  color: #28812b;
+  background-color: white;
+  border: 1px solid #149c19;
+  font-size: medium;
+    border-radius: 20px;
+}
+

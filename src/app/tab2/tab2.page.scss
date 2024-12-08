@@ -1,0 +1,89 @@
+ion-content{
+  position: absolute;
+  background-color: #dfecdf;
+}
+
+
+ion-segment-button {
+  margin-left: 10px;
+  // --indicator-color: #6abf69; /* Vert marécage pour l'indicateur actif */
+  // --color-checked: white; /* Couleur du texte quand actif */
+  --background-checked: #6abf69; /* Fond des boutons actifs */
+  --border-radius: 15px; /* Arrondi */
+  // --border-color: ;
+  border: 1px solid #075509;
+  // font-size: 14px;
+  padding: 0;
+}
+
+.banner-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-card {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.product-card.hidden {
+  opacity: 0;
+  transform: scale(0.95); /* Réduit légèrement pendant la disparition */
+  pointer-events: none; /* Désactive les interactions pendant la transition */
+}
+
+
+ion-col{
+  align-items: center;
+  align-content: center;
+  .b{
+    color: #075509;
+    border-radius: 10px;
+    width: 100%;
+  }
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  // background-color: #f0f8f0;  /* Fond très léger vert */
+  border-radius: 8px;  /* Coins arrondis pour la carte */
+  // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100%; /* Assure que la carte a une hauteur appropriée */
+}
+
+.category-icon {
+  font-size: 20px;  /* Taille de l'icône */
+  color: #28812b;   /* Couleur de l'icône (vert) */
+  background-color: #dcedc8;  /* Fond léger vert clair autour de l'icône */
+  border-radius: 50%;   /* Rend l'icône ronde */
+  padding: 15px;  /* Espacement autour de l'icône */
+  margin-bottom: 10px;  /* Espacement entre l'icône et le nom */
+}
+
+.category-name {
+  color: #333;
+}
+
+.right-space{
+  margin-left: 20px;
+}
+
+// *{
+//   border: 1px solid;
+// }
+
+ion-item{
+  height: 60px;
+  align-content: center;
+  i{
+    font-size: 25px;
+  }
+}

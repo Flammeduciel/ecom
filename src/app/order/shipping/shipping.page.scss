@@ -1,0 +1,62 @@
+*{
+  // border: 1px solid;
+}
+
+ion-col{
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+i{
+  font-size: 28px;
+}
+
+.tab{
+  margin-bottom: 20px;
+  ion-col{
+    height: 70px;
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+    background-color: rgba(105, 200, 108, 0.112);
+  }
+  i{
+    background-color: white;
+    border-radius: 50%;
+  }
+}
+
+.active{
+  border-bottom: 2px solid rgb(0, 0, 0) !important;
+}
+
+.down{
+  position: relative;
+  bottom: 1px;
+}
+
+h2{
+  text-align: left !important;
+}
+
+p{
+  text-align: justify;
+}
+
+div{
+  margin: 10px;
+}
+
+label{
+  color: green;
+}
+
+input{
+  height: 25px;
+}
+
+span{
+  padding-left: 30px;
+  position: absolute;
+  left: 60px;
+  top: 0px;
+  // z-index: 5;
+}

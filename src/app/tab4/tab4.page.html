@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="home"></ion-back-button>
+  </ion-buttons>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <!-- Carrousel de bannières -->
+    <swiper-container
+    [slidesPerView]="1"
+    [spaceBetween]="10"
+    [autoplay]="{ delay: 3000 }"
+    [loop]="true"
+    [pagination]="true"
+    >
+      <swiper-slide *ngFor="let banner of banners">
+        <img [src]="banner.image" alt="{{ banner.title }}" class="banner-image" />
+      </swiper-slide>
+    </swiper-container>
+
+  <ion-row *ngFor="let item of cartItems; let i = index">
+    <ion-col size="4">
+      <img [src]="item.productImage" alt="">
+    </ion-col>
+    <ion-col size="8">
+      <div class="part-two">
+        <h3>{{ item.productName }}</h3>
+        <p>{{ item.productCategory }}</p>
+        <p><strong>{{ item.productPrice | currency }}</strong></p>
+        <ion-badge class="bg-cat" mode="ios">bleu</ion-badge>
+        <ion-badge class="bg-cat" mode="ios"> XXL</ion-badge>
+        <ion-badge class="bg-cat" mode="ios">bleu</ion-badge>
+        <ion-badge class="bg-cat" mode="ios"> XXL</ion-badge>
+        <div class="quantity-controls">
+          <i class="moins" (click)="changeQuantity(i, -1)">-</i>
+
+          <ion-input
+          [(ngModel)]="item.quantity"
+            type="number"
+            min="1"
+            max="99"
+            class="quantity-input">
+          </ion-input>
+
+          <i class="plus" (click)="changeQuantity(i, 1)">+</i>
+        </div>
+        <i (click)="removeItem(i)" class="far fa-times-circle delete"></i>
+      </div>
+    </ion-col>
+  </ion-row>
+
+  <h2>Vous aimerez peut-être : </h2>
+
+  <swiper-container [slidesPerView]="2" [spaceBetween]="10" [autoplay]="{ delay: 1000 }">
+    <swiper-slide *ngFor="let product of products">
+      <div class="product-card">
+        <div class="product-image">
+          <img [src]="product.imageUrl" alt="Produit">
+          <!-- <ion-icon name="heart" class="wishlist-icon" ></ion-icon> -->
+          <!-- <div class="discount-badge">{{ product.discount }}% off</div> -->
+        </div>
+        <div class="product-info">
+          <p class="product-name truncate-text">{{ product.name }}</p>
+          <!-- <ion-badge mode="ios">{{ product.category }}</ion-badge> -->
+          <p class="product-category truncate-text">{{ product.category }}</p>
+          <p class="product-price">{{ product.price | currency:'XAF' }}</p>
+          <i class="fas fa-cart-plus add-to-cart"></i>
+        </div>
+        <!-- <ion-icon name="add" class="add-to-cart"></ion-icon> -->
+      </div>
+    </swiper-slide>
+  </swiper-container>
+
+  <br><br><br><br>
+</ion-content>
+<ion-footer>
+
+  <ion-row>
+    <ion-col size="8"><h5 class="button">Total : XAF {{ totalAmount }}</h5></ion-col>
+    <ion-col size="4">
+      <ion-button (click)="openPaymentSheet()" fill="clear" shape="round">
+        Checkout
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-footer>
+
+<ion-action-sheet
+  #paymentSheet
+  [isOpen]="isPaymentSheetOpen"
+  (didDismiss)="onPaymentSheetDismissed()"
+  [buttons]="paymentButtons">
+</ion-action-sheet>

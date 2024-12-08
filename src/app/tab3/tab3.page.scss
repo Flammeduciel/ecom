@@ -1,0 +1,154 @@
+ion-header {
+  box-shadow: none;
+}
+
+.content{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.gallery-image {
+  height: 100%;
+  object-fit: contain;
+}
+
+.seller-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avg-note {
+  position: absolute;
+  top: 50%;
+  // bottom: 150px;
+  right: 20px;
+  border: 2px solid #149c19;
+  border-radius: 50px;
+  padding: 10px;
+  font-size: large;
+  background-color: #51d7561f;
+  z-index: 100;
+  i{
+    margin-left: 10px;
+  }
+}
+
+.wishlist {
+  position: absolute;
+  top: 44%;
+  right: 20px;
+  border: 2px solid #149c19;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: large;
+  background-color: #51d7561f;
+  z-index: 100;
+}
+
+.shop{
+  position: absolute;
+  top: 38%;
+  right: 20px;
+  border: 2px solid #149c19;
+  border-radius: 50%;
+  padding: 10px;
+  font-size: large;
+  background-color: #51d7561f;
+  z-index: 100;
+}
+
+.prix{
+  text-align: right;
+}
+
+.avatar{
+  border-radius: 5px;
+}
+
+ion-row{
+  align-content: center;
+  align-items: center;
+  ion-col{
+    align-content: center;
+    align-items: center;
+  }
+}
+
+p{
+  margin: 0;
+}
+
+.star{
+  color: rgb(250, 215, 15);
+}
+.com-content,.desc{
+  margin: 20px;
+}
+
+.quantity-controls {
+  // position: absolute;
+  /* top: 0px; */
+  width: 100px;
+  // border: 1px solid black;
+  display: flex;
+  bottom: 10px;
+  right: 10px;
+  i{
+   font-size: 30px;margin: auto;
+  }
+}
+
+.quantity-input {
+  // border: 2px solid blue;
+  height: 30px;
+  text-align: center;
+}
+
+
+ion-badge{
+  align-items: center;
+  padding: 5px;
+  color: #28812b;
+  background-color: white;
+  border: 1px solid #149c19;
+  font-size: medium;
+  border-radius: 10px;
+  margin-left: 10px;
+  // width: -webkit-fill-available;
+}
+
+.bg-cat{
+  margin: 3px;
+  padding: 10px;
+}
+
+ion-footer{
+  ion-button{
+    color: #075509;
+    border: 2.5px solid #149c19;
+    border-radius: 20px;
+    width: 100%;
+  }
+  ion-col{
+    align-content: center;
+  }
+  background-color: #c6eac7eb;
+}
+
+.tab {
+  margin-left: 20px;
+}
+
+.swiper-container {
+  padding: 10px;
+}
+
+.gallery-image {
+  height: 550px;
+  object-fit: cover;
+}

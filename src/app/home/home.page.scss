@@ -1,0 +1,44 @@
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 30px;
+  margin-right: 8px;
+}
+
+.app-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.buttons-section ion-button {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  font-size: 10px;
+}
+
+.search-bar {
+  padding: 10px;
+  background-color: #f8f8f8; /* Couleur de fond pour simuler un espace séparé */
+}
+
+ion-searchbar {
+  --background: #ffffff; /* Couleur de fond blanche pour le champ de recherche */
+  border-radius: 8px; /* Coins arrondis */
+  --box-shadow: none; /* Supprime l'ombre */
+}

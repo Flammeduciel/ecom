@@ -1,0 +1,101 @@
+
+<ion-content  [scrollEvents]="true" (ionScroll)="onScroll($event)">
+  <ion-item lines="none">
+    <h1><strong>Shop<span style="color: #28812b;">.online</span></strong></h1>
+    <ion-item slot="end" lines="none">
+      <i class="far fa-envelope"></i>
+      <i class="far fa-bell right-space"></i>
+    </ion-item>
+  </ion-item>
+  <ion-row>
+  <ion-col size="12">
+    <input type="text" name="" id="" placeholder="rechercher un article, une boutique ...">
+  </ion-col>
+  <!-- <ion-col size="2">
+      <ion-button (click)="openPreferences()" color="light" mode="ios">
+        <i class="fas fa-cogs"></i>
+      </ion-button>
+  </ion-col> -->
+</ion-row>
+
+
+  <ion-list-header>
+    <ion-label>Offres spéciales</ion-label>
+    <ion-button>Voir</ion-button>
+  </ion-list-header>
+
+  <!-- Carrousel de bannières -->
+  <swiper-container
+  [slidesPerView]="1"
+  [spaceBetween]="10"
+  [autoplay]="{ delay: 3000, disableOnInteraction: false }"
+  [loop]="true"
+  [pagination]="true"
+  >
+    <swiper-slide *ngFor="let banner of banners">
+      <img [src]="banner.image" alt="{{ banner.title }}" class="banner-image" />
+    </swiper-slide>
+  </swiper-container>
+
+  <!-- Slide avec les catégories -->
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="3" *ngFor="let category of categories">
+          <div class="category-card">
+            <i [class]="category.icon" class="category-icon"></i> <!-- Utilisation de l'icône FontAwesome -->
+            <div class="category-name">{{category.name}}</div>
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-segment scrollable [(ngModel)]="selectedCategory" (ionChange)="changeCategory($event.detail.value?.toString())"  class="rounded-segment">
+    <ion-segment-button>
+      tous
+    </ion-segment-button>
+    <ion-segment-button value="top">
+      Top Ventes
+    </ion-segment-button>
+    <ion-segment-button value="new">
+      Nouveautés
+    </ion-segment-button>
+    <ion-segment-button value="promo">
+      Promotions
+    </ion-segment-button>    <ion-segment-button value="to236p">
+      Top Ventes
+    </ion-segment-button>
+    <ion-segment-button value="new01">
+      Nouveautés
+    </ion-segment-button>
+    <ion-segment-button value="pro2335mo">
+      Promotions
+    </ion-segment-button>    <ion-segment-button value="to20p">
+      Top Ventes
+    </ion-segment-button>
+
+  </ion-segment>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="product-card" size="6" *ngFor="let product of filteredProducts">
+        <div>
+          <div class="product-image">
+            <img [src]="product.imageUrl" alt="Produit">
+            <!-- <ion-icon name="heart" class="wishlist-icon" ></ion-icon> -->
+            <!-- <div class="discount-badge">{{ product.discount }}% off</div> -->
+          </div>
+          <div class="product-info">
+            <p class="product-name truncate-text">{{ product.name }}</p>
+            <!-- <ion-badge mode="ios">{{ product.category }}</ion-badge> -->
+            <p class="product-category truncate-text">{{ product.category }}</p>
+            <p class="product-price">{{ product.price | currency:'XAF' }}</p>
+            <i class="fas fa-cart-plus add-to-cart"></i>
+          </div>
+          <!-- <ion-icon name="add" class="add-to-cart"></ion-icon> -->
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
+
